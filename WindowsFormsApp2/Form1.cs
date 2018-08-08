@@ -12,9 +12,52 @@ namespace WindowsFormsApp2
 {
     public partial class Form1 : Form
     {
+        
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            labelName.Text = textBox1.Text;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            if (this.textBox1.Text != "")
+            {
+                listBoxTodo.Items.Add(this.textBoxTask.Text);
+                this.textBoxTask.Focus();
+                this.textBoxTask.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Please enter a todo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listBoxDone.Items.Add(listBoxTodo.SelectedItem);
+            listBoxTodo.Items.Remove(listBoxTodo.SelectedItem);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listBoxTodo.Items.Add(listBoxDone.SelectedItem);
+            listBoxDone.Items.Remove(listBoxDone.SelectedItem);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
