@@ -22,6 +22,8 @@ namespace WindowsFormsApp2
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             labelName.Text = textBox1.Text;
+            this.textBox1.Focus();
+            this.textBox1.Clear();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -58,6 +60,11 @@ namespace WindowsFormsApp2
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

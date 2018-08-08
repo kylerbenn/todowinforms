@@ -50,17 +50,16 @@
             // 
             this.BoxName.Controls.Add(this.btnSubmit);
             this.BoxName.Controls.Add(this.textBox1);
-            this.BoxName.Controls.Add(this.labelName);
             this.BoxName.Location = new System.Drawing.Point(12, 12);
             this.BoxName.Name = "BoxName";
-            this.BoxName.Size = new System.Drawing.Size(431, 72);
+            this.BoxName.Size = new System.Drawing.Size(403, 72);
             this.BoxName.TabIndex = 0;
             this.BoxName.TabStop = false;
             this.BoxName.Text = "Enter your name";
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(339, 25);
+            this.btnSubmit.Location = new System.Drawing.Point(301, 25);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 20);
             this.btnSubmit.TabIndex = 2;
@@ -70,15 +69,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(68, 25);
+            this.textBox1.Location = new System.Drawing.Point(18, 25);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(252, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(24, 28);
+            this.labelName.Location = new System.Drawing.Point(485, 12);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(0, 13);
             this.labelName.TabIndex = 0;
@@ -186,6 +186,7 @@
             this.ClientSize = new System.Drawing.Size(844, 440);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.labelName);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelDone);
             this.Controls.Add(this.labelTodo);
