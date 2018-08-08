@@ -33,7 +33,7 @@ namespace WindowsFormsApp2
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if (this.textBox1.Text != "")
+            if (this.textBoxTask.Text != "")
             {
                 listBoxTodo.Items.Add(this.textBoxTask.Text);
                 this.textBoxTask.Focus();
